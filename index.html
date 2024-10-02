@@ -19,11 +19,20 @@
       align-items: center;
       text-align: center;
     }
-    .hero { background-color: #e6f2ff; }
+    .hero { 
+      background-color: #e6f2ff;
+      padding: 20px;
+    }
     .section.active-section { display: flex; } /* Only the active section is displayed */
     .about { background-color: #f0f8ff; }
     .contact { background-color: #f0f0f5; }
     footer { text-align: center; padding: 20px; background-color: #e6f2ff; }
+    .features, .values {
+      margin-top: 40px;
+    }
+    .features h3, .values h3 {
+      color: #007bff;
+    }
   </style>
 </head>
 <body>
@@ -56,6 +65,36 @@
     <div>
       <h1>Welcome to Nefelibata</h1>
       <p>Your journey into the clouds starts here.</p>
+
+      <!-- Company Overview -->
+      <div class="company-overview">
+        <h2>Who We Are</h2>
+        <p>Nefelibata is a cloud solutions provider dedicated to empowering businesses with cutting-edge cloud technology. Our innovative solutions help businesses thrive in an ever-evolving digital world.</p>
+      </div>
+
+      <!-- Services Section -->
+      <div class="features">
+        <h3>Our Services</h3>
+        <p>We offer a range of cloud services, including:</p>
+        <ul class="list-unstyled">
+          <li>🌩️ Cloud Infrastructure Solutions</li>
+          <li>🔒 Data Security and Backup</li>
+          <li>🚀 Performance Optimization</li>
+          <li>💻 Application Hosting</li>
+        </ul>
+      </div>
+
+      <!-- Core Values Section -->
+      <div class="values">
+        <h3>Our Core Values</h3>
+        <p>At Nefelibata, we believe in:</p>
+        <ul class="list-unstyled">
+          <li>🔧 Innovation: Constantly pushing the boundaries of cloud technology.</li>
+          <li>🤝 Collaboration: Working closely with our clients to provide tailored solutions.</li>
+          <li>📈 Scalability: Offering flexible solutions that grow with your business.</li>
+          <li>🌟 Reliability: Ensuring your data and services are always available.</li>
+        </ul>
+      </div>
     </div>
   </section>
 
