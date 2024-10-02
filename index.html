@@ -18,13 +18,13 @@
       justify-content: center;
       align-items: center;
       text-align: center;
+      padding: 20px; /* Add padding for better spacing */
     }
     .hero { 
       background-color: #e6f2ff;
-      padding: 20px;
     }
     .section.active-section { display: flex; } /* Only the active section is displayed */
-    .about { background-color: #f0f8ff; }
+    .business-intro { background-color: #f0f8ff; }
     .contact { background-color: #f0f0f5; }
     footer { text-align: center; padding: 20px; background-color: #e6f2ff; }
     .features, .values {
@@ -50,7 +50,7 @@
             <a class="nav-link" href="#" onclick="showSection('home')">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" onclick="showSection('about')">About Us</a>
+            <a class="nav-link" href="#" onclick="showSection('business')">Business Introduction</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#" onclick="showSection('contact')">Contact Us</a>
@@ -63,7 +63,7 @@
   <!-- Home Section -->
   <section id="home" class="hero active-section">
     <div>
-      <h1>Welcome to Nefelibata!</h1>
+      <h1>Welcome to Nefelibata</h1>
       <p>Your journey into the clouds starts here.</p>
 
       <!-- Company Overview -->
@@ -98,11 +98,11 @@
     </div>
   </section>
 
-  <!-- About Us Section -->
-  <section id="about" class="section about">
+  <!-- Business Introduction Section -->
+  <section id="business" class="section business-intro">
     <div>
-      <h2>About Nefelibata</h2>
-      <p>We are cloud wanderers, providing seamless cloud services for businesses that need agility and innovation.</p>
+      <h2>Business Introduction</h2>
+      <p>Nefelibata specializes in delivering advanced cloud solutions to help businesses navigate the complexities of digital transformation. Our expertise enables us to offer tailored solutions that align with your business goals.</p>
     </div>
   </section>
 
