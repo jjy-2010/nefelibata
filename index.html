@@ -21,7 +21,12 @@
       padding: 20px; /* Add padding for better spacing */
     }
     .hero { 
-      background-color: #e6f2ff;
+      background-image: url('your-background-image-url.jpg'); /* 替换为你的背景图片链接 */
+      background-size: cover;
+      background-position: center;
+      color: white; /* 使文本颜色为白色以提高可读性 */
+      display: flex; /* Use flex to center content */
+      flex-direction: column; /* Stack items vertically */
     }
     .section.active-section { display: flex; } /* Only the active section is displayed */
     .business-intro { background-color: #f0f8ff; }
@@ -32,6 +37,11 @@
     }
     .features h3, .values h3 {
       color: #007bff;
+    }
+    .company-overview {
+      background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+      padding: 20px;
+      border-radius: 10px;
     }
   </style>
 </head>
