@@ -10,7 +10,8 @@
     .hero { padding: 100px 0; background-color: #e6f2ff; text-align: center; }
     .hero h1 { color: #007bff; }
     footer { text-align: center; padding: 20px; background-color: #e6f2ff; }
-    .section { padding: 60px 0; }
+    .section { padding: 60px 0; display: none; }
+    .active-section { display: block; }
   </style>
 </head>
 <body>
@@ -25,13 +26,13 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link active" href="#home">Home</a>
+            <a class="nav-link" href="#" onclick="showSection('home')">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#about">About Us</a>
+            <a class="nav-link" href="#" onclick="showSection('about')">About Us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact Us</a>
+            <a class="nav-link" href="#" onclick="showSection('contact')">Contact Us</a>
           </li>
         </ul>
       </div>
@@ -39,13 +40,13 @@
   </nav>
 
   <!-- Home Section -->
-  <section id="home" class="hero">
+  <section id="home" class="hero active-section">
     <h1>Welcome to Nefelibata</h1>
     <p>Your journey into the clouds starts here.</p>
   </section>
 
   <!-- About Us Section -->
-  <section id="about" class="section bg-light">
+  <section id="about" class="section">
     <div class="container">
       <h2>About Nefelibata</h2>
       <p>We are cloud wanderers, providing seamless cloud services for businesses that need agility and innovation. Our mission is to empower clients with scalable and efficient cloud solutions.</p>
@@ -67,15 +68,14 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
+    // Function to show a specific section and hide the others
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll('.section, .hero');
+      sections.forEach(section => {
+        section.classList.remove('active-section');
       });
-    });
+      document.getElementById(sectionId).classList.add('active-section');
+    }
   </script>
 </body>
 </html>
