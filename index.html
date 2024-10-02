@@ -6,18 +6,30 @@
   <title>Nefelibata</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    body { background-color: #f0f8ff; }
-    .hero { padding: 100px 0; background-color: #e6f2ff; text-align: center; }
-    .hero h1 { color: #007bff; }
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+    .section, .hero {
+      height: 100vh; /* Each section takes up the full height of the viewport */
+      display: none; /* Hide sections by default */
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .hero { background-color: #e6f2ff; }
+    .section.active-section { display: flex; } /* Only the active section is displayed */
+    .about { background-color: #f0f8ff; }
+    .contact { background-color: #f0f0f5; }
     footer { text-align: center; padding: 20px; background-color: #e6f2ff; }
-    .section { padding: 60px 0; display: none; }
-    .active-section { display: block; }
   </style>
 </head>
 <body>
 
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container">
       <a class="navbar-brand" href="#">Nefelibata</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,21 +53,23 @@
 
   <!-- Home Section -->
   <section id="home" class="hero active-section">
-    <h1>Welcome to Nefelibata</h1>
-    <p>Your journey into the clouds starts here.</p>
+    <div>
+      <h1>Welcome to Nefelibata</h1>
+      <p>Your journey into the clouds starts here.</p>
+    </div>
   </section>
 
   <!-- About Us Section -->
-  <section id="about" class="section">
-    <div class="container">
+  <section id="about" class="section about">
+    <div>
       <h2>About Nefelibata</h2>
-      <p>We are cloud wanderers, providing seamless cloud services for businesses that need agility and innovation. Our mission is to empower clients with scalable and efficient cloud solutions.</p>
+      <p>We are cloud wanderers, providing seamless cloud services for businesses that need agility and innovation.</p>
     </div>
   </section>
 
   <!-- Contact Us Section -->
-  <section id="contact" class="section">
-    <div class="container">
+  <section id="contact" class="section contact">
+    <div>
       <h2>Contact Us</h2>
       <p>Email: info@nefelibata.com</p>
       <p>Phone: +123-456-7890</p>
@@ -76,6 +90,11 @@
       });
       document.getElementById(sectionId).classList.add('active-section');
     }
+
+    // Set initial section to home
+    document.addEventListener('DOMContentLoaded', () => {
+      showSection('home');
+    });
   </script>
 </body>
 </html>
